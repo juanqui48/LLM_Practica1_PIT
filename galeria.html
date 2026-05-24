@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería · Fuentesaúco · Zamora</title>
+<meta name="description" content="Galería de imágenes de Fuentesaúco: Los Espantes, Semana Santa, iglesias, paisajes y productos de La Guareña, Zamora.">
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+  .galeria-page {
+    padding: 5rem 2rem 7rem;
+    background: var(--blanco);
+  }
+  .galeria-page-inner { max-width: 1200px; margin: 0 auto; }
+  .galeria-page h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--gris-suave);
+    color: var(--texto);
+  }
+  .galeria-page h2 em { font-style: italic; color: var(--tierra); }
+  .galeria-cat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 5rem;
+  }
+  .galeria-cat .g-item {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    cursor: pointer;
+  }
+  .galeria-cat .g-item:first-child { grid-column: span 2; height: 300px; }
+  .galeria-cat .g-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .galeria-cat .g-item:hover img { transform: scale(1.07); }
+  .galeria-cat .g-item .cap {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1.5rem 1rem 0.8rem;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity .35s, transform .35s;
+  }
+  .galeria-cat .g-item:hover .cap { opacity: 1; transform: translateY(0); }
+  @media (max-width: 700px) {
+    .galeria-cat { grid-template-columns: 1fr 1fr; }
+    .galeria-cat .g-item:first-child { grid-column: span 1; }
+    .galeria-cat .g-item { height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar" class="dark-nav">
+  <a href="index.html" class="nav-logo">Fuentesaúco</a>
+  <ul class="nav-links">
+    <li><a href="espantes.html">Espantes</a></li>
+    <li><a href="semana-santa.html">Semana Santa</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="contacto.html">Cómo llegar</a></li>
+  </ul>
+</nav>
+
+<!-- MINI HERO -->
+<header class="page-hero">
+  <div class="page-hero-bg" style="background: linear-gradient(to bottom,rgba(15,10,5,.45),rgba(15,10,5,.65)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Iglesia_de_Santa_Mar%C3%ADa_del_Castillo%2C_Fuentesa%C3%BAco_02.jpg/1280px-Iglesia_de_Santa_Mar%C3%ADa_del_Castillo%2C_Fuentesa%C3%BAco_02.jpg') center/cover no-repeat;"></div>
+  <div class="page-hero-content">
+    <p class="page-hero-sub">Imágenes de Fuentesaúco y La Guareña</p>
+    <h1><em>Galería</em></h1>
+  </div>
+</header>
+
+<!-- MIGAS -->
+<div class="breadcrumb">
+  <a href="index.html">Inicio</a><span>›</span> Galería
+</div>
+
+<div class="galeria-page">
+  <div class="galeria-page-inner">
+
+    <!-- FIESTAS Y TRADICIÓN -->
+    <h2 class="reveal">Fiestas y <em>Tradición</em></h2>
+    <div class="galeria-cat reveal">
+      <div class="g-item">
+        <img src="https://i0.wp.com/vadetoros.es/wp-content/uploads/2025/07/DSC_2149_11zon.jpg?resize=1000%2C667&ssl=1"
+             alt="Los Espantes 2025, Prao de la Reguera. Foto: Rodrigo Pérez / vadetoros.es" loading="lazy">
+        <div class="cap">Los Espantes — el Prao de La Reguera</div>
+      </div>
+      <div class="g-item">
+        <img src="https://i0.wp.com/vadetoros.es/wp-content/uploads/2025/07/DSC_2153_11zon.jpg?resize=600%2C400&ssl=1"
+             alt="Espantadores en el Prao" loading="lazy">
+        <div class="cap">Espantadores frente a los toros</div>
+      </div>
+      <div class="g-item">
+        <img src="https://i0.wp.com/vadetoros.es/wp-content/uploads/2025/07/DSC_2156_11zon.jpg?resize=600%2C400&ssl=1"
+             alt="Los toros en el Prao de la Reguera" loading="lazy">
+        <div class="cap">La manada en el prado</div>
+      </div>
+      <div class="g-item">
+        <img src="https://enfoquezamora.com/wp-content/uploads/2024/03/SEMANA-SANTA-FUENTESAUCO-34.webp"
+             alt="Nazarenos Semana Santa Fuentesaúco 2024. Foto: Emilio Fraile / enfoquezamora.com" loading="lazy">
+        <div class="cap">Nazarenos — Semana Santa</div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80"
+             alt="Feria de Los Santos, productos de la tierra" loading="lazy">
+        <div class="cap">Feria de Los Santos</div>
+      </div>
+    </div>
+
+    <!-- PATRIMONIO -->
+    <h2 class="reveal">Patrimonio <em>Arquitectónico</em></h2>
+    <div class="galeria-cat reveal">
+      <div class="g-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Iglesia_de_Santa_Mar%C3%ADa_del_Castillo%2C_Fuentesa%C3%BAco_02.jpg/1280px-Iglesia_de_Santa_Mar%C3%ADa_del_Castillo%2C_Fuentesa%C3%BAco_02.jpg"
+             alt="Iglesia de Santa María del Castillo, BIC Monumento Nacional" loading="lazy">
+        <div class="cap">Iglesia de Santa María del Castillo — BIC Monumento Nacional</div>
+      </div>
+      <div class="g-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Iglesia_de_San_Juan_Bautista%2C_Fuentesa%C3%BAco_01.jpg/1280px-Iglesia_de_San_Juan_Bautista%2C_Fuentesa%C3%BAco_01.jpg"
+             alt="Iglesia de San Juan Bautista, Fuentesaúco" loading="lazy"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Iglesia_de_San_Juan_Bautista%2C_Fuentesa%C3%BAco_02.jpg/1280px-Iglesia_de_San_Juan_Bautista%2C_Fuentesa%C3%BAco_02.jpg'">
+        <div class="cap">Iglesia de San Juan Bautista</div>
+      </div>
+      <div class="g-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Iglesia_de_San_Juan_Bautista%2C_Fuentesa%C3%BAco_02.jpg/1280px-Iglesia_de_San_Juan_Bautista%2C_Fuentesa%C3%BAco_02.jpg"
+             alt="Iglesia de San Juan Bautista, detalle" loading="lazy">
+        <div class="cap">San Juan Bautista — detalle</div>
+      </div>
+    </div>
+
+    <!-- PAISAJE Y PRODUCTOS -->
+    <h2 class="reveal">Paisaje y <em>Productos</em></h2>
+    <div class="galeria-cat reveal">
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1529511582893-2d7e684dd128?w=1200&q=85"
+             alt="Campos de cereal en La Guareña, Zamora" loading="lazy">
+        <div class="cap">Campos de cereal — La Guareña</div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1552825898-5896ec192f9c?w=800&q=85"
+             alt="Espárragos blancos de la comarca" loading="lazy">
+        <div class="cap">Espárragos blancos de temporada</div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=800&q=85"
+             alt="Viñedos comarca de Zamora" loading="lazy">
+        <div class="cap">Viñedos — DO Toro y Tierra del Vino</div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1534432182912-63863115e106?w=800&q=85"
+             alt="Dulces típicos de la comarca" loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1623334044303-241021148842?w=800&q=85'">
+        <div class="cap">Dulces típicos — perrunillas y mantecados</div>
+      </div>
+      <div class="g-item">
+        <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&q=80"
+             alt="Queso de oveja de la comarca" loading="lazy">
+        <div class="cap">Queso de oveja artesano</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><div class="num">S. XVI</div><div class="label">Origen de los Espantes</div></div>
+    <div class="stat-item reveal"><div class="num">IGP</div><div class="label">Garbanzo Protegido</div></div>
+    <div class="stat-item reveal"><div class="num">32 km</div><div class="label">a Salamanca</div></div>
+    <div class="stat-item reveal"><div class="num">1593</div><div class="label">Habitantes (2025)</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand">Fuentesaúco<span>Zamora · Castilla y León</span></a>
+    <ul class="footer-links">
+      <li><a href="espantes.html">Espantes</a></li>
+      <li><a href="semana-santa.html">Semana Santa</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Cómo llegar</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 · Página de promoción turística de Fuentesaúco, Zamora</p>
+    <div class="author-credit"><strong>Juanqui Pitman</strong></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
